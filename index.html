@@ -2,10 +2,45 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Examen Git</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Git - Flight Checker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Ali Boutaha – Examen Assurance</h1>
     <p>Assurance de qualité logicielle</p>
+    
+    <div class="flight-checker">
+        <h2>Vérifier les vols Canada → Maroc</h2>
+        <p class="subtitle">Trouvez les vols les moins chers depuis le Canada vers le Maroc</p>
+        
+        <div class="search-form">
+            <div class="form-group">
+                <label for="departure-city">Ville de départ (Canada):</label>
+                <select id="departure-city">
+                    <option value="Toronto">Toronto (YYZ)</option>
+                    <option value="Montreal">Montréal (YUL)</option>
+                    <option value="Vancouver">Vancouver (YVR)</option>
+                    <option value="Calgary">Calgary (YYC)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="arrival-city">Ville d'arrivée (Maroc):</label>
+                <select id="arrival-city">
+                    <option value="Casablanca">Casablanca (CMN)</option>
+                    <option value="Marrakech">Marrakech (RAK)</option>
+                    <option value="Rabat">Rabat (RBA)</option>
+                    <option value="Tangier">Tanger (TNG)</option>
+                </select>
+            </div>
+            
+            <button id="search-btn" onclick="searchFlights()">Rechercher les vols</button>
+        </div>
+        
+        <div id="results" class="results"></div>
+    </div>
+    
+    <script src="flights.js"></script>
 </body>
 </html>
